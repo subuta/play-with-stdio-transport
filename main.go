@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/k0kubun/pp"
 
 	"github.com/subuta/play-with-stdio-transport/internals"
@@ -9,7 +10,8 @@ import (
 type eventParserImpl struct {}
 
 func (parser eventParserImpl) OnData(text string) error {
-	pp.Println("Got: ", text)
+	fmt.Print("Got: ")
+	pp.Println(text)
 	return nil
 }
 
