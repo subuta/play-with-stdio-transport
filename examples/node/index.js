@@ -8,4 +8,4 @@ console.log('Try ctrl+c for exit.')
 child.stdin.setEncoding('utf-8');
 child.stdout.pipe(process.stdout);
 
-child.stdin.write("console.log('Hello from Node')\n");
+child.stdin.write(`{"Type":"test", "Body": {"hoge": "fuga"}}\n`);

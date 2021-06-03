@@ -2,8 +2,11 @@ puts 'Try ctrl+c for exit.'
 
 io = IO.popen("./server", "r+")
 
-io.puts "puts('Hello from ruby')"
-puts io.gets
+io.puts "{\"Type\":\"test\", \"Body\": {\"hoge\": \"fuga\"}}"
+
+while line = io.gets
+  puts line
+end
 
 # This will close process.
 # io.close_write
